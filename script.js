@@ -39,7 +39,7 @@ function apiCall (inpWord) {
                         ${data[0].meanings[0].definitions[0].definition}
                     </p>    
                         <p class="word-example">
-                        ${data[0].meanings[0].definitions[0].definition || ""}
+                        ${data[0].meanings[0].definitions[1]?(data[0].meanings[0].definitions[1].definition || ""):"" }
                     </p>`;
 
                     sound.setAttribute("src", `${data[0].phonetics[0].audio}`);
